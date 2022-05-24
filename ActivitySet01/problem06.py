@@ -1,25 +1,30 @@
-# Loops & Iterators
+#Functions
 
-#largest=None
-#smallest=None
-#index=1
-l=[]
+def inputhrs():
+  hrs=float(input("Enter the number of hours you worked: "))
+  return hrs
 
-while True:
-    user=input("Enter a number: ")
-    if user=="done":
-        break
-    try:
-        user2=int(user)
-    except:
-        print("Not an integer.")
-        continue
-    l.append(user2)
-    #user2=None
-    #index+=1
-    
-    
-size=len(l)
-l.sort()
-print("Minimum: ",l[0])
-print("Maximum: ",l[size-1])
+def inputrate():
+  rate=float(input("Enter the rate per hour: "))
+  return rate
+  
+def computepay(h,r):
+    if hrs>40:
+        pay1=hrs*rate
+        rate2=rate*0.5
+        pay2=(hrs-40)*rate2
+        pay=pay1+pay2
+        
+    else:
+        pay=hrs*rate2
+        
+    return pay
+
+def output(c):
+  print("Your payment is: ",c)
+
+
+hrs=inputhrs()
+rate=inputrate()
+payment=computepay(hrs,rate)
+output(payment)
