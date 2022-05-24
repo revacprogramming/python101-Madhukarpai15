@@ -1,15 +1,25 @@
-# Strings
+#Loops and Iterations
 
-def extract(a):
-    l=["0","1","2","3","4","5","6","7","8","9"]
-    for i in range(0,size):
-        if a[i] in l:
-            pos=a.find(a[i])
-            Str2=a[pos:size]
-            num=float(Str2)
-            return num
+#largest=None
+#smallest=None
+#index=1
+l=[]
 
-Str="X-DSPAM-Confidence:    0.8475"
-size=len(Str)
-Num=extract(Str)
-print(Num)
+while True:
+    user=input("Enter a number: ")
+    if user=="done":
+        break
+    try:
+        user2=int(user)
+    except:
+        print("Not an integer.")
+        continue
+    l.append(user2)
+    #user2=None
+    #index+=1
+    
+    
+size=len(l)
+l.sort()
+print("Minimum: ",l[0])
+print("Maximum: ",l[size-1])
