@@ -1,23 +1,15 @@
-# Files
+#Strings
 
-fname=input("Enter the file name: ")
-fh=open(fname)
-l=[]
+Str="X-DSPAM-Confidence:    0.8475"
 
-for line in fh:
-    if line.startswith("X-DSPAM-Confidence:"):
-        pos=line.find(":")
-        flt=line[pos+3:]
-        flt2=float(flt)
-        l.append(flt2)
-    else:
-        continue
-        
+def find():
+    pos=Str.find(':')
+    strnum=Str[pos+1:].lstrip()
+    num=float(strnum)
+    return num
 
-size=len(l)
-total=0
-for i in range(0,size):
-    total+=l[i]
-avg=total/size
-
-print("Average spam confidence: ",avg)
+def output(c):
+    print(c)
+    
+num=find()
+output(num)
