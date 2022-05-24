@@ -1,39 +1,30 @@
-# Dictionaries
+#Lists 1
 
-fname=input("Enter the file name: ")
-fh=open(fname)
+def Input():
+  fname=input("Enter the file name: ")
+  return fname
+
+def open_f(a):
+  fh=open(a)
+  return fh
+
 l=[]
-d={}
-l1=[]
 
-for line in fh:
-    if line.startswith("From"):
-        x=line.rstrip().split()
-        mail=x[1]
-        l.append(mail)
-
-size=len(l)
-for i in range(0,size):
-    count=l.count(l[i])/2
-    ele=l[i]
-    if ele in d:
-        continue
-    else:
-        d[ele]=count
-        l1.append(ele)
-    
-#dsize=len(d)
-l1size=len(l1)
-
-keys=list(d.keys())
-vals=list(d.values())
-
-maxkey=keys[vals.index(max(vals))]
-maxval=max(vals)
-
-print(maxkey,maxval)
-
-
-
-
+def find_word(b):
+  for line in b:
+      x=line.split()
+      for word in x:
+          if word in l:
+              continue
+          else:
+              l.append(word)
+          
         
+def output(c):
+  l.sort()
+  print(l)
+
+fname=Input()
+fh=open_f(fname)
+find_name(fh)
+output()
