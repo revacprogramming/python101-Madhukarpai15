@@ -1,19 +1,27 @@
-# Functions
+#Conditional Execution 2
 
-def computepay(h,r):
-    if hrs>40:
-        pay1=hrs*rate
-        rate2=rate*0.5
-        pay2=(hrs-40)*rate2
-        pay=pay1+pay2
-        
+def Input():
+    score=float(input('Enter the score: '))
+    return score
+
+def find_grade(a):
+    if a>1.0 or a<0.0:
+        return 'The grade entered is out of range.'
     else:
-        pay=hrs*rate2
-        
-    return pay
+        if a>=0.9:
+            return 'A'
+        elif a>=0.8:
+            return 'B'
+        elif a>=0.7:
+            return 'C'
+        elif a>=0.6:
+            return 'D'
+        elif a<=0.6:
+            return 'F'
 
-hrs=float(input("Enter the number of hours you worked: "))
-rate=float(input("Enter the rate per hour: "))
+def output(c):
+    print(c)
 
-payment=computepay(hrs,rate)
-print("Your payment is: ",payment)
+score=Input()
+grade=find_grade(score)
+output(grade)
