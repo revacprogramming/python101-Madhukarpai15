@@ -1,4 +1,8 @@
 
+def input_two_numbers():
+  
+
+
 def add(a, b):
     pass  # ...
 
