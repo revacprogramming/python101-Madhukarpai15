@@ -2,6 +2,8 @@
 
 def get_cs():
     """get string input"""
+  a=input("Enter the string: ")
+  return a
 
 
 def cs_to_lot(cs):
