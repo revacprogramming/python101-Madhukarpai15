@@ -5,16 +5,18 @@ def input_two_numbers():
     return a
 
 def add(a, b):
-    pass  # ...
+   c=a+b
+   return c
+    
 
 
 def output(a, b, sum):
-    pass  # ...
+    print('The sum of ',a,'and ',b,'is ',sum)
 
 
 def main():
     a= input_two_numbers()
-    b= input
+    b= input_two_numbers()
     sum = add(a, b)
 
     output(a, b, sum)
