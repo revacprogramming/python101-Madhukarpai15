@@ -23,4 +23,4 @@ size=len(l)
 l.sort()
 print("Minimum: ",l[0])
 print("Maximum: ",l[size-1])
- 
+
